@@ -18,18 +18,18 @@ import java.util.Optional;
 @Component
 public class VatTuController {
     @Autowired
-    IVatTuService vatTuService;
+    public IVatTuService vatTuService;
 
     @Autowired
-    INCCService nccService;
+    public INCCService nccService;
 
     @Autowired
-    INuocService nuocService;
+    public INuocService nuocService;
 
     @GetMapping
     public ResponseEntity<Iterable<VatTu>> getAllVatTu() {
         Iterable<VatTu> listVatTu = vatTuService.getAll();
-        return new ResponseEntity<Iterable<VatTu>>(listVatTu, HttpStatus.OK);
+        return new ResponseEntity<>(listVatTu, HttpStatus.OK);
     }
 
     @PostMapping

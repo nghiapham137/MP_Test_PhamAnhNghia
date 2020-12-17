@@ -13,7 +13,7 @@ import java.util.Optional;
 @RequestMapping("/nuoc")
 public class NuocController {
     @Autowired
-    INuocService nuocService;
+     public INuocService nuocService;
 
     @GetMapping
     public ResponseEntity<Iterable<Nuoc>> getAllNuoc() {

@@ -13,7 +13,7 @@ import java.util.Optional;
 @RequestMapping("/NCC")
 public class NCCController {
     @Autowired
-    INCCService inccService;
+     public INCCService inccService;
 
     @GetMapping
     public ResponseEntity<Iterable<NCC>> getAllNCC() {
